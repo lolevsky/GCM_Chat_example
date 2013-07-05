@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/sessionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <EditText
+            android:id="@+id/massege"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </EditText>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_tab_send" >
+        </Button>
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearLayout1"
+        android:layout_below="@id/sessionName"
+        android:background="#00000000"
+        android:cacheColorHint="#00000000"
+        android:drawSelectorOnTop="true"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+</RelativeLayout>

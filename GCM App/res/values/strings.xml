@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="facebook_app_id">118265805046633</string>
+	<string name="gcm_sender_id">879830610296</string>
+
+    <string name="app_name">GCM App</string>
+    <string name="sign_out_button_name">Sign out</string>
+    <string name="revoke_access_button_name">Revoke access</string>
+    <string name="default_status" />
+    <string name="progress_message">Signing in to Google&#8230;</string>
+    <string name="signed_in_status">Signed in.</string>
+    <string name="signed_out_status">Signed out.</string>
+    <string name="greeting_status">Welcome, %s.</string>
+
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    
+    <string name="sign_out">Sign out</string>
+    
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+    
+    <string name="Last_time_visit">Last time visited : </string>
+    
+    <string name="time_send">Time send : </string>
+    
+    <string name="Error_Date">Error - Date</string>
+    <string name="Error">Error</string>
+    <string name="chat_with_all">Chat with all</string>
+    
+    <string name="session_with">Now in session - %s</string>
+    
+</resources>

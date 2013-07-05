@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iapplize.gcmtest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!--  Required if we need to invalidate access tokens -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <permission android:name="com.iapplize.gcmtest.permission.C2D_MESSAGE" 
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.iapplize.gcmtest.permission.C2D_MESSAGE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".MainApplication" >
+        <activity
+            android:name=".activity.SignInActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.Sherlock.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+        </activity>
+        
+        <receiver
+            android:name=".gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.iapplize.gcmtest" />
+            </intent-filter>
+        </receiver>
+<!--         <service android:name="gcm.GCMIntentService" /> -->
+        
+        <provider android:name="com.iapplize.gcmtest.database.DataBaseProvider" android:authorities="com.iapplize.gcmtest.databaseprovider" android:exported="false" />
+    </application>
+
+</manifest>

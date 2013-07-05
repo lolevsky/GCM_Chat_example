@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+	<datastore-index kind="messages" ancestor="false"
+		source="manual">
+		<property name="fromEmail" direction="asc" />
+		<property name="toEmail" direction="asc" />
+		<property name="Updated_at" direction="desc" />
+	</datastore-index>
+</datastore-indexes>
