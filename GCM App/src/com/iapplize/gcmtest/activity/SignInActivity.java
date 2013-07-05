@@ -52,7 +52,6 @@ public class SignInActivity extends SherlockFragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		mApp = (MainApplication) getApplicationContext();
 
 		uiHelper = new UiLifecycleHelper(this, callback);

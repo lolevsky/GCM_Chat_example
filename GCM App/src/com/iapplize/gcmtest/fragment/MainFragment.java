@@ -172,6 +172,8 @@ public class MainFragment extends SherlockFragment implements OnClickListener,
 
 			String selection = null;
 			String[] arg = null;
+			
+			String sortOrder = TableChat.COLUMN_UPDATED_AT + " DESC";
 
 			if (getActivity() instanceof MainActivity) {
 
@@ -187,11 +189,15 @@ public class MainFragment extends SherlockFragment implements OnClickListener,
 								main.mSelectedUser.Email };
 
 					}
+				}else{
+					selection = TableChat.COLUMN_MULTYCHAT + " = ? ";
+							
+					arg = new String[] {"true"};
 				}
 			}
 
 			return new CursorLoader(getActivity(), TableChat.CONTENT_URI, null,
-					selection, arg, null);
+					selection, arg, sortOrder);
 		}
 		return null;
 	}
