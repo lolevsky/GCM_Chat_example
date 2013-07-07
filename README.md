@@ -8,4 +8,4 @@ you will need to get the following libraries before you can use this example:
 2)git clone https://android.googlesource.com/platform/frameworks/volley 
 3)https://github.com/ianhanniballake/ActionBarSherlock#__sid=0
 
-you can find the application in tje google play: https://play.google.com/store/apps/details?id=com.iapplize.gcmtest
+you can find the application in the google play: https://play.google.com/store/apps/details?id=com.iapplize.gcmtest
